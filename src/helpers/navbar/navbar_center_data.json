@@ -1,0 +1,24 @@
+[
+    {
+        "id":1,
+        "name":"Hakkımızda",
+        "path":"hakkimizda"
+    },
+    {
+        "id":2,
+        "name":"Juri-Yarışma Yazılımı",
+        "path":"yarisma"
+
+    },
+    {
+        "id":3,
+        "name":"Word Ninja",
+        "path":"wordninja"
+
+    },
+    {
+        "id":4,
+        "name":"Word Pyramids",
+        "path":"wordpyramids"
+    }
+]

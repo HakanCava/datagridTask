@@ -1,13 +1,425 @@
-body {
+
+/* ! browsarın default degerlerini resetle */
+* { 
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+  padding: 0;
+  box-sizing: border-box;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+
+/*! CSS in yeni özelliği olan SASS/SCSS deki inheritance özelliğini kullandık  */
+
+.app {
+  max-width: 1637px;
+  max-height: 976px;
+  margin: auto;
+
+  /*! Navbar */
+  .navbar {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    margin: 10px;
+    padding: 10px;
+    .left {
+      flex: 1;
+      display: flex;
+      justify-content: center;
+    }
+
+    .center {
+      display: flex;
+      justify-content: space-around;
+      flex: 3;
+      gap: 10px;
+      .links1 {
+        text-decoration: none;
+        color: black;
+        font-weight: 500;
+      }
+    }
+
+    .right {
+      flex: 1;
+      display: flex;
+      justify-content: center;
+      gap: 18px;
+      > div {
+        cursor: pointer;
+      }
+    }
+  }
+
+  /*! Home */
+  .home {
+    margin: 1rem;
+    background: linear-gradient(
+      180deg,
+      #eff2ff -30.56%,
+      rgba(232, 236, 255, 0) 135.85%
+    );
+    border-radius: 6px;
+    padding: 15px;
+
+    /*! Search */
+    .search_container {
+      .input {
+        display: flex;
+        justify-content: space-between;
+        flex-wrap: wrap;
+        .input_left {
+          margin: 44px 75px 11px 75px;
+          display: flex;
+          > input {
+            width: 380px;
+            height: 42px;
+            background: #ffffff;
+            border-top-left-radius: 39px;
+            border-bottom-left-radius: 39px;
+            padding: 15px;
+            border: none;
+            outline: none;
+          }
+          .icon {
+            .icon_renk {
+              width: 45px;
+              height: 42px;
+              background: #744bfc;
+              border-top-right-radius: 39px;
+              border-bottom-right-radius: 39px;
+              display: flex;
+              align-items: center;
+              justify-content: center;
+            }
+          }
+          .koni {
+            width: 49px;
+            height: 42px;
+            background: #ffffff;
+            border-radius: 29px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-left: 9px;
+          }
+        }
+        .input_right {
+          margin: 44px 75px 11px 75px;
+          display: flex;
+          .input_right_btn {
+            display: flex;
+            width: 175px;
+            height: 42px;
+            background: #744bfc;
+            border: none;
+            border-radius: 39px;
+            color: white;
+            justify-content: space-around;
+            align-items: center;
+            cursor: pointer;
+            transition: all 0.3s ease-in-out;
+            &:hover {
+              background: #744bfce1;
+            }
+          }
+        }
+      }
+    }
+
+    /*! Table */
+    .table_container {
+      min-height: 450px;
+
+      .table {
+        /*! thead  */
+        .thead {
+          .thead_tr {
+            > th {
+              border: 1px solid #ddddddb4;
+              padding: 10px;
+              height: 60px;
+              vertical-align: middle;
+              background: #ffffff;
+              text-align: start;
+              padding-left: 20px;
+
+              > div {
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+              }
+            }
+            > th:first-child {
+              border-top-left-radius: 10px;
+            }
+            > th:last-child {
+              border-top-right-radius: 10px;
+            }
+          }
+        }
+
+        /*!tbody */
+
+        .tbody {
+          > tr {
+            overflow-wrap: break-word;
+            word-break: break-all;
+            > td {
+              height: 60px;
+              padding: 20px;
+              border: 1px solid #ddd;
+            }
+          }
+          > tr:nth-child(odd) {
+            background-color: white;
+          }
+          > tr:nth-child(even) {
+            background-color: transparent;
+          }
+        }
+      }
+    }
+    /*! Pagination  */
+    .pagination_container {
+      .pagination {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding: 10px;
+        .pagination_left {
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          .show {
+            width: 36px;
+            height: 18px;
+            font-weight: 500;
+            font-size: 12px;
+            line-height: 18px;
+            color: #744bfc;
+          }
+          .row_vektors {
+            width: 90px;
+            height: 37px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background: #ffffff;
+            border: 1px solid #cfc0ff;
+            border-radius: 39px;
+          }
+        }
+
+        .pagination_right {
+          display: flex;
+          align-items: center;
+          justify-content: space-between;
+          gap: 5px;
+          .go_btn {
+            border: none;
+            padding: 5px;
+          }
+          .pages {
+            font-size: 13px;
+          }
+          /*! paginate de sayfa numaralarını tek tek göstermek istersek bu kodu css olarak yazabiliriz */
+          /* .active {
+            border: 1px solid rgba(0, 0, 0, 0.493);
+            padding: 5px;
+          }
+          .inactive {
+            border: none;
+            padding: 5px;
+            background-color: rgba(180, 174, 174, 0.588);
+          } */
+        }
+      }
+    }
+  }
+}
+
+/*! MODAL  */
+
+.modal_btn1 {
+  border: none;
+  background-color: #f5f7ff !important;
+  color: #744bfc;
+  &:hover {
+    color: #744bfc;
+  }
+}
+
+.modal_btn2 {
+  border: none;
+  background-color: #744bfc !important;
+}
+
+
+
+
+
+/*! Media Query */
+@media screen and (max-width: 493px) {
+  .app {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: auto;
+    .home {
+      margin: 1rem;
+      .search_container {
+        .input {
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          .input_left {
+            margin: 10px 20px 0px 20px;
+            display: flex;
+            > input {
+              width: 140px;
+              height: 42px;
+            }
+          }
+          .input_right {
+            margin: 20px 55px 5px 55px;
+            display: flex;
+            .input_right_btn {
+              font-size: 14px;
+              width: 100px;
+              padding: 5px;
+              &:hover {
+                background: #744bfce1;
+              }
+            }
+          }
+        }
+      }
+      .table_container {
+        .table {
+          /*! thead  */
+          .thead {
+            text-align: center;
+            .thead_tr {
+              > th {
+                border: 1px solid #ddddddb4;
+                padding: 5px;
+                height: 30px;
+                vertical-align: middle;
+                background: #ffffff;
+                text-align: start;
+                padding-left: 5px;
+              }
+            }
+          }
+          .tbody {
+            text-align: center;
+            > tr {
+              height: 40px;
+              vertical-align: middle;
+
+              > td {
+                padding: 5px;
+                border: 1px solid #ddd;
+              }
+            }
+
+            > tr:nth-child(odd) {
+              background-color: white;
+            }
+            > tr:nth-child(even) {
+              background-color: transparent;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+@media screen and (min-width: 493px) and (max-width: 610px) {
+  .app {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: auto;
+    .home {
+      margin: 1rem;
+      .search_container {
+        .input {
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          .input_left {
+            margin: 20px 40px 0px 40px;
+            display: flex;
+            > input {
+              width: 240px;
+              height: 42px;
+            }
+          }
+        }
+      }
+      .table_container {
+        .table {
+          /*! thead  */
+          .thead {
+            .thead_tr {
+              > th {
+                border: 1px solid #ddddddb4;
+                padding: 10px;
+                height: 30px;
+                vertical-align: middle;
+                background: #ffffff;
+                text-align: start;
+                padding-left: 5px;
+              }
+            }
+          }
+          .tbody {
+            > tr:nth-child(odd) {
+              background-color: white;
+            }
+            > tr:nth-child(even) {
+              background-color: transparent;
+            }
+            > tr {
+              height: 40px;
+              vertical-align: middle;
+              > td {
+                padding: 5px;
+                border: 1px solid #ddd;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 900px) {
+  .app {
+    .navbar {
+      flex-direction: column;
+      text-align: center;
+      .center {
+        flex-wrap: wrap;
+        flex-direction: column;
+      }
+    }
+  }
+}
+
+@media screen and (min-width: 610px) and (max-width: 1020px) {
+  .app {
+    .home {
+      .search_container {
+        .input {
+          display: flex;
+          justify-content: center;
+          align-items: center;
+        }
+      }
+    }
+  }
 }

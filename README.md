@@ -50,8 +50,12 @@
 └── yarn.lock
 ```
 
-## Çalıitırma
+## Çalıştırma
 
-- Öncelikle 
+- Öncelikle bu repoyu kendi lokalinize  __git clone https://github.com/HakanCava/datagridTask.git__ komutu ile klonlayın.
+- Ardından terminalde __yarn__ yazarak node_module dosyasını indirin.
+- Ve son olarak terminalde __yarn start__ yazarak localhost:3000 de çalıştırın
+
+## Canlı
 
 **<p align="center">&#9786; Happy Coding &#9997;</p>**

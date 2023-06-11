@@ -57,5 +57,7 @@
 - Ve son olarak terminalde __yarn start__ yazarak localhost:3000 de çalıştırın
 
 ## Canlı
+- Ve aşağıdaki linkten projemizin canlısını görebilirisiniz:
+- https://datagridtaskhcava.netlify.app/
 
-**<p align="center">&#9786; Happy Coding &#9997;</p>**
+**<p align="center">&#9786; Mutlu Kodlar &#9997;</p>**

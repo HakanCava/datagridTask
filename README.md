@@ -14,13 +14,13 @@
 - __yarn add react-icons__ bunu indirdim ama kullanmadım 
 - Not: bootstrapin index.js deki eklentisini untmuyoruz aksi takdirde çalışmaz
 3. Daha sonra projede benden istenileni adım adım yapıyorum:
-- components, context, helpers, pages, router klasörlerini src klasöründe oluşturdum.
-- pages daki dosyalarımı tanımladım sonra bunlara routerda path belirledim ve bunu App.js de çağırdım.
+- Components, context, helpers, pages, router klasörlerini src klasöründe oluşturdum.
+- Pages daki dosyalarımı tanımladım sonra bunlara routerda path belirledim ve bunu App.js de çağırdım.
 - Navbar componentimi oluşturdum
 - Home page imi ve içinde kullanacağım componentlerimi oluşturdum
-- context de global statelerimi tanımladım. Büyük projelerde redux kullanmak daha mantıklıdır.
-- bu adımları izlerken her aşamada css ilede tasarımlarımı yaptım
-- en sonda media query ler ile projeme responsivlik kazandırmaya çalıştım.
+- Context de global statelerimi tanımladım. Büyük projelerde redux kullanmak daha mantıklıdır.
+- Bu adımları izlerken her aşamada css ilede tasarımlarımı yaptım
+- En sonda media query ler ile projeme responsivlik kazandırmaya çalıştım.
 
 
 ## Taskin İskeleti

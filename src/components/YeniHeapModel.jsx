@@ -4,6 +4,13 @@ import Form from "react-bootstrap/Form";
 import Modal from "react-bootstrap/Modal";
 import { useDataContext } from "../context/DataProvider";
 
+// interface row{ //!interface typescript dosyalarında oluşturabiliriz bu projede kullanmadık sadece örnek olarak buraya yazıldı
+// id:number,
+// link:string,
+// name:string,
+// desc:string
+// }
+
 const YeniHesapModel = ({ show, handleClose }) => {
   let { data, createData } = useDataContext();
 

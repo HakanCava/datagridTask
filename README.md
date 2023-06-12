@@ -6,7 +6,21 @@
 
 - Bu projemizde bir data tablosu oluşturuyoruz. Ekranda gelen ilk dört veri mockapi olarak "table_row_data" dosyasından alıyoruz.
 - Sonraki verileri kullanıcı "yeni hesap ekle" butonuna tıklayarak yeni bir veri ekleyebilir. Eklenen veri local storage da tutulur ve ekrana basılır.
-
+- Bu taski yaparken aşağıdaki adımları izledim:
+1. Öncelikle boş bir dosya oluşturup VSCode editöründen açtım ve terminal den __yarn create react-app .__ diyerek react i klasörümüze indiriyoruz. 
+2. Daha sonra kullanmayı düşündüğüm üçüncü part kütüphaneleride indiriyorum: 
+- __yarn add react-bootstrap bootstrap__
+- __yarn add react-router-dom__
+- __yarn add react-icons__ bunu indirdim ama kullanmadım 
+- Not: bootstrapin index.js deki eklentisini untmuyoruz aksi takdirde çalışmaz
+3. Daha sonra projede benden istenileni adım adım yapıyorum:
+- components, context, helpers, pages, router klasörlerini src klasöründe oluşturdum.
+- pages daki dosyalarımı tanımladım sonra bunlara routerda path belirledim ve bunu App.js de çağırdım.
+- Navbar componentimi oluşturdum
+- Home page imi ve içinde kullanacağım componentlerimi oluşturdum
+- context de global statelerimi tanımladım. Büyük projelerde redux kullanmak daha mantıklıdır.
+- bu adımları izlerken her aşamada css ilede tasarımlarımı yaptım
+- en sonda media query ler ile projeme responsivlik kazandırmaya çalıştım.
 
 
 ## Taskin İskeleti

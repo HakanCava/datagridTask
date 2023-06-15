@@ -74,8 +74,6 @@
 - Ve aşağıdaki linkten projemizin canlısını görebilirisiniz:
 - https://datagridtaskhcava.netlify.app/
 
-## Video
 
-<video src="datagrid-video.mp4" controls title="Title"></video>
 
 **<p align="center">&#9786; Mutlu Kodlar &#9997;</p>**

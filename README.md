@@ -7,7 +7,7 @@
 
 ![Alt text](datagrid-gif.gif)
 
-**<p align="center">&#9786; Mutlu Kodlar &#9997;</p>**
+
 
 ## Açıklama
 
@@ -77,4 +77,4 @@
 - Ardından terminalde __yarn__ yazarak node_module dosyasını indirin.
 - Ve son olarak terminalde __yarn start__ yazarak localhost:3000 de çalıştırın
 
-
+**<p align="center">&#9786; Mutlu Kodlar &#9997;</p>**
